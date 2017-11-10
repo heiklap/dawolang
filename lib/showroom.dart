@@ -69,7 +69,7 @@ void showCombination(List<String> _wordList, Map<String, String> _commandM) {
 
     _commandM[x] = padS + findComS;
     String vS = _commandM[x]; //  like:  F:  K:
-    print('Command::  $x  :: $vS');
+    print('$x $vS');
     count++;
   }
   print('       * * *     COMBINATION-GALLERY done   * * * \n');
