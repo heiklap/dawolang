@@ -2,15 +2,13 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 ///  List-tools keeps basic List helper tools.
-///  This is independent and do not import an y of dawolang files.
+///  This is independent and do not import any of dawolang files.
 
 library list_tools;
 
-//  import 'lexicon_base.dart';
-
+///  String manipulation tools.
 class ListTools {
-
-  ///  Return List of items, where #String exist. from dawo-tools.
+  ///  Return List of items, where #String exist. Orig. from dawo-tools.
   List<String> StrInList(List<String> _l, String _s) {
     List<String> _queryL = new List();
     for (var x = 0; x < _l.length; x++) {
@@ -32,7 +30,6 @@ class ListTools {
     return _c; // 0-length check in the receiver side.
   }
 
-
   ///  Printing list in many, _w, rows.  With line-feed after 2 rows.
   void linePrintList(List<String> _l, String lName, int _w) {
     int _length = _l.length;
@@ -44,7 +41,8 @@ class ListTools {
       y++;
       rowBuf.write(_l[x]);
       rowBuf.write(' ');
-      if (y >= _w) { //   || (x == _length)
+      if (y >= _w) {
+        //   || (x == _length)
         buf.write(rowBuf);
         buf.writeln(''); //  line-feed, suppose.
         rowBuf.clear(); //  empty buffer
@@ -56,8 +54,7 @@ class ListTools {
     print('------------ linePrintList done  -------------------------\n');
   }
 
-
-  ///
+  ///  Finds String in another String.
   String findStrInStr(findS, origS) {
     String _s = '';
     if (origS.indexOf(findS) > -1) {
@@ -74,7 +71,7 @@ class ListTools {
     for (var x in _l) {
       String _s = findStrInStr(sF, x);
       if (_s.length > 0) {
-        _count ++;
+        _count++;
         buf.write('$_s '); //  This should add ' ' to String
       }
     }
@@ -82,7 +79,6 @@ class ListTools {
     buf.write('=$countS');
     return buf.toString();
   }
-
 
   ///  Not used.  Find String
   String fs(String _s, String caller, List<String> _wordList) {
@@ -95,9 +91,6 @@ class ListTools {
 
   ///  Reserving this word here.
   void handleCommand() {}
-
-
-}  //  -----  class ListTools
+} //  -----  class ListTools
 
 var lt = new ListTools();
-

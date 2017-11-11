@@ -39,12 +39,12 @@ main() {
 
   an.analyzeStrS(':ANY :WILL :DO', lb.wordList);
   an.analyzeStrS(':ANSWER :IS :NO', lb.wordList);
-  print('---------------  wg:wgString  ----------------------------------');
+  print('---------------  an:weightString  --------------------------------');
   //  using list_tools library
   print(an.weightString(':TO further :DEVELOPMENT of :THINGS :CALL :US ', lb.wordList));
   print(an.weightString(':ALLOW :US :TO :SOLVE :ALL :PROBLEM s in this magtter', lb.wordList));
 
-  print('---------------  wg:wgString  done ------------------------------');
+  print('---------------  an:weightString  done ---------------------------');
 
   ///  Employing library showRoom
   sr.showWords(lb.wordList);

@@ -4,23 +4,18 @@
 ///  Lexicon_base keeps lists and Maps of words and command-groups,
 ///  for dawolang analyzing system.
 
-library word_gallery;
+library lexicon_base;
 
 import 'list_handler.dart';
 import 'rules.dart';
 
-//  NOT   Trying to handle this without a class
+///  First of many lexicons, that keep words and commands of dawolang.
 class LexiconBase {
-
-
-
-
-
-
 
   List<String> wordList = new List();
 
-  ///  ? =  Do not know, what it should be.
+  ///  Would not like #dartformat to spoil this layout. lol
+  ///  ?, #  Have special meanings.
   void build(String caller) {
     print('-->>-->>-- #dawolang  build   C:By: $caller  -->>-->>--');
 
@@ -61,10 +56,10 @@ class LexiconBase {
   }
 
   ///  Most important are:  Command. Data, Human, Resource
-  ///
+  ///  Map that eventually keeps all dawolang group and word data.
   Map<String, String> commandM = {
     'A:': 'Area', //  GLOBAL INNER LOCAL  OUTER  WAY
-    'a': 'Activity',
+    'a:': 'Activity',
     'B:': 'Boost??', // :HOORAY
     'C:': 'Command', //  19
     'c:': 'command', //
@@ -83,10 +78,10 @@ class LexiconBase {
     'N:': 'Navigate', //  0
     'O:': 'Order', //  0
     '#:': '## Dawo-object ##', // 6
-    '€': 'Coding',
+    '€:': 'Coding',
     'P:': 'Phase', //   Permission  ALLOW  ASK  BLOCKED
     'Q:': 'Quest', //  Quest / Question  1  HOW-TO
-    'q': 'quantity',
+    'q:': 'quantity',
     'R:': 'Resource', //  area  goal
     'Rx:': 'Resource_special',
     '?:': '?                 ',
@@ -95,7 +90,7 @@ class LexiconBase {
 
     ///  Specification; giving some more information about entity.
     'S:': 'State', // 0 !!!    OR ? state
-    's': 'speed',
+    's:': 'speed',
     'T:': 'Time', //  1  !!!  Yesterday
     'U:': 'Unknown', //  ?  Unknown
     'u:': 'unknown', //  ?  Unknown
@@ -107,5 +102,6 @@ class LexiconBase {
   };
 
 }  //  -----  class LexiconBase
-///  Instance of #words# class.
+
+///  Instance of #words #class.
 var lb = new LexiconBase();

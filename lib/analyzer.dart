@@ -3,18 +3,15 @@
 
 /// * Analyzer finds special words that exist in #lexicon word list.
 /// * Words are classified with: V: R: aso. markings to special groups.
+/// ' Words beginning with same letter are inside same list-item.
 
 library analyzer;
-
 
 import 'lexicon_base.dart';
 import 'list_tools.dart';
 
-
-
-///
-class Analyzer{
-
+///  Finds words that are in lexicon word list.
+class Analyzer {
   ///  Analyze long String that can contain  many #command #word's.
   String analyzeStrS(String _aS, List<String> _wordList) {
     print('-->>-->>-- :dawolang: analyze-Strings  -->>-->>-- ');
@@ -38,13 +35,12 @@ class Analyzer{
     }
     _retS = buf.toString();
     print(':EXTRACTED::  $_retS ');
-    print('--<<--<<-- :dawolang: analyze-Strings  done--<<--<<-- \n');
+    print('--<<--<<-- :dawolang: analyze-Strings  done--<<--<<-- \n ');
     return _retS; //  Might be many words in this String.
   }
 
-
   ///  Same as above, but with no prints.
-  String weightString(String _aS, List<String> _wordList ) {
+  String weightString(String _aS, List<String> _wordList) {
     String _retS = '';
     String _t = '';
     StringBuffer buf = new StringBuffer();
@@ -62,10 +58,8 @@ class Analyzer{
     _retS = buf.toString();
     return _retS; //  Might be many words in this String.
   }
-
-}  //  -----  analyzer class
+} //  -----  analyzer class
 
 //  var analyzer = new Analyzer();
 //  Prefer short name for instance.
 var an = new Analyzer();
-
