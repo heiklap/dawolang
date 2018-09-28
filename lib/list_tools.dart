@@ -6,6 +6,24 @@
 
 library list_tools;
 
+import 'base_lb.dart';
+
+//  Start using RegExp in String operations.
+/*  from:  https://www.dartlang.org/guides/libraries/library-tour
+Replacing part of a string
+Strings are immutable objects, which means you can create them but you can’t change them. If you look closely at the String API docs, you’ll notice that none of the methods actually changes the state of a String. For example, the method replaceAll() returns a new String without changing the original String:
+
+var greetingTemplate = 'Hello, NAME!';
+var greeting = greetingTemplate
+    .replaceAll(new RegExp('NAME'), 'Bob');
+
+assert(greeting !=
+    greetingTemplate); // greetingTemplate didn't change.
+ */
+
+//  No much need to control printing in this library.
+bool _pB = false; //  To control printing in flowC method.
+
 ///  String manipulation tools.
 class ListTools {
   ///  Return List of items, where #String exist. Orig. from dawo-tools.
@@ -51,6 +69,7 @@ class ListTools {
     }
     print('------------ linePrintList  Name: $lName -----------------');
     print(buf);
+    print('int _length: $_length and _rowCount: $_rowCount :not used here ---');
     print('------------ linePrintList done  -------------------------\n');
   }
 
@@ -64,7 +83,7 @@ class ListTools {
   }
 
   ///  Find All Strings s1 that are in List l.
-  ///  TODO  Usage:
+  ///  TODO  Usage: findAllStringsInList(String sF, List<String>
   String findAllStringsInList(String sF, List<String> _l) {
     int _count = 0;
     StringBuffer buf = new StringBuffer();
@@ -72,7 +91,7 @@ class ListTools {
       String _s = findStrInStr(sF, x);
       if (_s.length > 0) {
         _count++;
-        buf.write('$_s '); //  This should add ' ' to String
+        buf.write('$_s '); // Remark: This also adds ' ' to end of String
       }
     }
     String countS = _count.toString();
@@ -91,6 +110,18 @@ class ListTools {
 
   ///  Reserving this word here.
   void handleCommand() {}
+
+  ///  Pasting flowC method and flowS function from dawo.
+  ///  Calling print/print-to-buffer function from base_lib.
+  ///  Getting local variables; Actor and Buffer right.
+  ///  Changing to use local -
+  void flowC(String msg, bool p) {
+    ///  Call flowServe with #LOCAL variables.
+    //  Use _pB when needed to control printing.  Might be not-private.
+    _pB;
+    flwSrv(':con:', buf, msg, p);
+  }
 } //  -----  class ListTools
 
+///  Instance of list tools
 var lt = new ListTools();

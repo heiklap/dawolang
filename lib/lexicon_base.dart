@@ -6,22 +6,27 @@
 
 library lexicon_base;
 
-import 'list_handler.dart';
-import 'rules.dart';
+import 'base_lb.dart';
+//  unused:  import 'list_handler.dart';
+//  unused:  import 'rules.dart';
 
 ///  First of many lexicons, that keep words and commands of dawolang.
 class LexiconBase {
-
+  ///  Simple list of used words.
   List<String> wordList = new List();
 
   ///  Would not like #dartformat to spoil this layout. lol
-  ///  ?, #  Have special meanings.
+  ///  ?, #  Have special meanings here.
   void build(String caller) {
     print('-->>-->>-- #dawolang  build   C:By: $caller  -->>-->>--');
+    String flowMsg = '-->>-->>-- #dawolang  build   C:By: $caller  -->>-->>--';
+    flowC(flowMsg, true);
+    buf.writeln(':dl:buf: $flowMsg');
 
+    ///  Add words to list, be ready for more.
     wordList.addAll([
       'S:ABLE H:ADM E:ANSWER q:ANY R:AREA X:ALLOW X:ASK',
-      'N:BACK #:BATON X:BLOCKED D:BUS',
+      'N:BACK #:BATON X:BLOCKED F:BROKEN D:BUS',
       'C:CHECK-IN ?:CLIENT S:CLOSED €:CODE E:CONQUER C:CUT',
       'E:DEVELOPMENT N:DISTANCE C:DO N:DOWN',
       'I:EXAMPLE q:EMPTY #E:EFFORT !!?:EVENT',
@@ -35,7 +40,7 @@ class LexiconBase {
       '#:LANG O:LAST A:LOCAL V:LOL V:LOW ?D?C:LOAD C:LOCK',
       '?q:MANY I:MAP L:MACRO X:MAYBE M:MESSAGE V:MID #:MILL',
       '?:NAME T:NEW O:NEXT S:NOT-USED X:NO I:NOTE X:NOT T:NOW',
-      'T:OLD C:ORDER S:OFF S:ON q:ONLY q:ONE S:OPEN',
+      'T:OLD C:ORDER S:OFF F:OK S:ON q:ONLY q:ONE S:OPEN',
       'C:OPEN N:OUT A:OUTER',
       '#:PLACARD O:PREVIOUS S:PROBLEM M:PING E:PLAN C:PLAY D:PHOTO',
       'q:QUARTER ?:QUIET Q:QUEST ?C:QUESTION',
@@ -55,6 +60,7 @@ class LexiconBase {
     // '', '', '', '', '', '', '', '', '', '', '', '',]);
   }
 
+  ///  TODO  Do dartdoc allow comments after code?  //  like this.
   ///  Most important are:  Command. Data, Human, Resource
   ///  Map that eventually keeps all dawolang group and word data.
   Map<String, String> commandM = {
@@ -95,13 +101,21 @@ class LexiconBase {
     'U:': 'Unknown', //  ?  Unknown
     'u:': 'unknown', //  ?  Unknown
     'V:': 'Valuable', //  Valuable
-    'v:': 'ValueLess', //  Valuable
+    'v:': 'ValueLess', //  Valueless
     'X:': ' X or Yes', //  Not known  MUST KNOW !!!
     'Y:': '',
     'Z:': 'Z?',
   };
 
-}  //  -----  class LexiconBase
+  ///  Pasting flowC method and flowS function from dawo.
+  ///  Calling print/print-to-buffer function from base_lib.
+  ///  Getting local variables; Actor and Buffer right.
+  ///  Changing to use local -
+  void flowC(String msg, bool p) {
+    ///  Call flowServe with #LOCAL variables.
+    flwSrv(':dawolang-lexicon-base:', buf, msg, p);
+  }
+} //  -----  class LexiconBase
 
 ///  Instance of #words #class.
 var lb = new LexiconBase();

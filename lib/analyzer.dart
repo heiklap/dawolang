@@ -7,42 +7,79 @@
 
 library analyzer;
 
-import 'lexicon_base.dart';
+import 'base_lb.dart';
+//  unused now:  import 'lexicon_base.dart';
 import 'list_tools.dart';
 
 ///  Finds words that are in lexicon word list.
 class Analyzer {
+  bool _pB = false; //  To control printing in flowC method.
+
   ///  Analyze long String that can contain  many #command #word's.
-  String analyzeStrS(String _aS, List<String> _wordList) {
-    print('-->>-->>-- :dawolang: analyze-Strings  -->>-->>-- ');
-    String _retS = '';
+  String analyzeStrS(String _anStr, List<String> _wordList) {
+    //  print('-->>-->>-- :dawolang: analyze-Strings  -->>-->>-- ');
+    List<String> retL = [];
+    retL.add(_anStr);
+    //  assume we check String against other
+    String _extractS = ' *emptyAtBegin*';
     String _t = '';
+    //  String _t was meant for temporary modifying.  To avoid unused;
+    _t;
     StringBuffer buf = new StringBuffer();
-    List<String> sL = new List();
+    buf.write(':an:buf:  ');
+    List<String> _analyzeL = new List();
     //  Collect to String ONLY #command words from String _aS
-    sL.addAll(_aS.split(' '));
-    print(sL);
-    print(sL.length);
-    for (var x in sL) {
+    _analyzeL.addAll(_anStr.split(' '));
+    //  print(sL);
+    //  print(sL.length);
+    for (var x in _analyzeL) {
       //  Using list_tools library
       if (lt.countStrInList(_wordList, x) > 0) {
         String word = x;
+        //  Meant for more complicated use-cases. To avoid unused:
+        word;
         String wordLengthS = x.length.toString();
-        print('W: $word  L: $wordLengthS');
+        //  Meant for more complicated use-cases. To avoid unused:
+        wordLengthS;
+        //  print('W: $word  L: $wordLengthS');
         buf.write(x);
         buf.write(' ');
       }
     }
-    _retS = buf.toString();
-    print(':EXTRACTED::  $_retS ');
-    print('--<<--<<-- :dawolang: analyze-Strings  done--<<--<<-- \n ');
+    buf.write(' :done:');
+    //  TODO  From where get data to:  extracted ??
+    //  it is empty!!
+
+    _extractS = buf.toString();
+
+    String _retS = '';
+    //  TODO  Output! Where? '..:debug:dawolang:print:.:connector;opJoin:...');
+    retL.add(':an:aStr: :EXTRACTED::');
+    retL.add(buf.toString()); //  for future use
+    String returnString = (':an:aStr:: $_anStr  :EXTRACTED::  $_extractS ');
+    print(':an:aStr:: $_anStr  :EXTRACTED::  $_extractS ');
+    //  print(':EXTRACTED::  $_retS ');
+    //  print('--<<--<<-- :dawolang: analyze-Strings  done--<<--<<-- \n ');
+    //  TODO  PLAN:  Make this return Map<String, String>
+    Map<String, String> _retMap = {
+      'inStr': '',
+      'rule': '',
+      'com': '',
+      'outStr': '',
+    };
+    //  When in need of more complicated return value, use map.toString.
+    //  Just to name it here to avoid unused.
+    _retMap;
+    _retS = returnString;
     return _retS; //  Might be many words in this String.
-  }
+  } //  -----  analyzeStrS
 
   ///  Same as above, but with no prints.
   String weightString(String _aS, List<String> _wordList) {
     String _retS = '';
     String _t = '';
+    //  String _t was meant for temporary modifying.  To avoid unused;
+    _t;
     StringBuffer buf = new StringBuffer();
     List<String> sL = new List();
     //  Collect to String ONLY #command words from String _aS
@@ -58,8 +95,21 @@ class Analyzer {
     _retS = buf.toString();
     return _retS; //  Might be many words in this String.
   }
+
+  ///  Pasting flowC method and flowS function from dawo.
+  ///  Calling print/print-to-buffer function from base_lib.
+  ///  Getting local variables; Actor and Buffer right.
+  ///  Changing to use local -
+  void flowC(String msg, bool p) {
+    //  Use false _pB when prevent printing::
+    _pB;
+
+    ///  Call flowServe with #LOCAL variables.
+    //  flowServe is in base_lb.dart.
+    flwSrv(':con:', buf, msg, p);
+  }
 } //  -----  analyzer class
 
-//  var analyzer = new Analyzer();
-//  Prefer short name for instance.
+///  Long name:   var analyzer = new Analyzer();
+///  Short name:  Prefer short name for instance.
 var an = new Analyzer();

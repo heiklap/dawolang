@@ -9,7 +9,7 @@ library listHandler;
 ///  Great plans for this.. not exactly.
 class ListHandler {
   List<String> l = new List();
-
+  //  Making empty values to list.
   void build() {
     l.addAll(['', '', '', '', '', '', '', '', '']);
   }

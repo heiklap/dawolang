@@ -1,14 +1,14 @@
 name: dawolang
 description: Word-based command and message language. Always grateful to dartlang, our little brother.
-version: 0.0.1
+version: 0.0.2
 homepage: https://dawopack.blogspot.fi/search/label/dawolang
 author: Heikki K Lappalainen <heikkiklappalainen@gmail.com.com>
 
 environment:
-  sdk: '>=1.20.1 <2.0.0'
+  sdk: '>=2.0.0 <3.0.0'
 
 dependencies:
-  path: ^1.4.1
+  #  path: ^1.6.2
 
 dev_dependencies:
-  test: ^0.12.0
+  build_runner: ^1.0.0

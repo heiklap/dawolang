@@ -1,12 +1,13 @@
-# dawolang  0.0.1
+# dawolang  0.0.2
 
-A library for Dart developers.
 * Small, literal word-based message and command language, that eventually grows big, but stays always grateful to dartlang, it's little brother.
 * Helps in standardizing words, that are used in messages, and classifying them to groups.
-* Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+* Needed: Rules for forming and handling a sentence.
+* Question: Method to give ready sentence to action-handler.
+* HERE:  Updated to be Dart 2.0.0 compatible.
+* NEXT: Handler for non-tracked words in incoming text.
 
-* Watch: LICENSE file.
+* Watch dawolang: LICENSE file.
 * Github: https://github.com/heiklap/dawolang
 * Blog:  https://dawopack.blogspot.fi/search/label/dawolang 
 
@@ -14,7 +15,7 @@ A library for Dart developers.
 ## Usage
 
 A simple usage example:
-Version 0.0.1 prints it's data and analyzes and modifies simple String.
+Version 0.0.2 prints it's data and analyzes and modifies simple String.
 
     import 'package:dawolang/dawolang.dart';
 
