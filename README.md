@@ -5,6 +5,7 @@
 * Needed: Rules for forming and handling a sentence.
 * Question: Method to give ready sentence to action-handler.
 * HERE:  Updated to be Dart 2.0.0 compatible.
+*   deleting some accidentally added technical big folders in github.
 * NEXT: Handler for non-tracked words in incoming text.
 
 * Watch dawolang: LICENSE file.
