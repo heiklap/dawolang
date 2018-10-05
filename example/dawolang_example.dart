@@ -5,7 +5,13 @@
 import 'package:dawolang/dawolang.dart';
 
 main() {
+  ///  From stagehand example, not used here.
   var awesomeDawolang = new AwesomeDawolang();
+
+  //  test, if you are using typeSafe Dart:
+  //  bool b = [0][0];
+  //  With type-safe Dart, the analyzer produces error.
+
   buf.writeln(':buf: -->>-->>   dawolang_example.dart starting. -->>-->> ');
   print('awesomeDawolang:: ${awesomeDawolang.isAwesome}');
 
