@@ -1,5 +1,6 @@
-# dawolang  0.0.2
+# dawolang  0.1.0
 
+* Migrated to null safety
 * Small, literal word-based message and command language, that eventually grows big, but stays always grateful to dartlang, it's little brother.
 * Helps in standardizing words, that are used in messages, and classifying them to groups.
 * Needed: Rules for forming and handling a sentence.
@@ -16,7 +17,7 @@
 ## Usage
 
 A simple usage example:
-Version 0.0.2 prints it's data and analyzes and modifies simple String.
+Version 0.1.0  prints it's data and analyzes and modifies simple String.
 
     import 'package:dawolang/dawolang.dart';
 

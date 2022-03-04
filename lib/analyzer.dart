@@ -1,6 +1,7 @@
 // Copyright (c) 2017, Heikki K Lappalainen. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
+///*      version: 0.1.0   updated:  2022.4.3
 /// * Analyzer finds special words that exist in #lexicon word list.
 /// * Words are classified with: V: R: aso. markings to special groups.
 /// ' Words beginning with same letter are inside same list-item.
@@ -16,6 +17,7 @@ class Analyzer {
   bool _pB = false; //  To control printing in flowC method.
 
   ///  Analyze long String that can contain  many #command #word's.
+  ///  TODO  change word: _wordList TO  _wordBank
   String analyzeStrS(String _anStr, List<String> _wordList) {
     //  print('-->>-->>-- :dawolang: analyze-Strings  -->>-->>-- ');
     List<String> retL = [];
@@ -27,7 +29,8 @@ class Analyzer {
     _t;
     StringBuffer buf = new StringBuffer();
     buf.write(':an:buf:  ');
-    List<String> _analyzeL = new List();
+    // NULL safety     List<String> _analyzeL = new List();
+    List<String> _analyzeL = [];
     //  Collect to String ONLY #command words from String _aS
     _analyzeL.addAll(_anStr.split(' '));
     //  print(sL);
@@ -81,7 +84,8 @@ class Analyzer {
     //  String _t was meant for temporary modifying.  To avoid unused;
     _t;
     StringBuffer buf = new StringBuffer();
-    List<String> sL = new List();
+    //  NULL Safety     List<String> sL = new List();
+    List<String> sL = [];
     //  Collect to String ONLY #command words from String _aS
     sL.addAll(_aS.split(' '));
     for (var x in sL) {

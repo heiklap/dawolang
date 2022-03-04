@@ -1,6 +1,7 @@
 // Copyright (c) 2017, Heikki K Lappalainen. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
+///      version: 0.1.0    updated:  4.3.2022
 ///  List-tools keeps basic List helper tools.
 ///  This is independent and do not import any of dawolang files.
 
@@ -28,7 +29,8 @@ bool _pB = false; //  To control printing in flowC method.
 class ListTools {
   ///  Return List of items, where #String exist. Orig. from dawo-tools.
   List<String> StrInList(List<String> _l, String _s) {
-    List<String> _queryL = new List();
+    //  NULL M Safety   List<String> _queryL = new List();
+    List<String> _queryL = [];
     for (var x = 0; x < _l.length; x++) {
       if (_l[x].indexOf(_s) > -1) {
         _queryL.add(_l[x]);

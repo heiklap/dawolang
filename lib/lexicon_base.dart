@@ -1,6 +1,7 @@
 // Copyright (c) 2017, Heikki K Lappalainen. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
+///      version: 0.1.0     updated   2022.4.3.
 ///  Lexicon_base keeps lists and Maps of words and command-groups,
 ///  for dawolang analyzing system.
 
@@ -13,7 +14,8 @@ import 'base_lb.dart';
 ///  First of many lexicons, that keep words and commands of dawolang.
 class LexiconBase {
   ///  Simple list of used words.
-  List<String> wordList = new List();
+  //  NullSafe  List<String> wordList = new List();
+  List<String> wordList = [];
 
   ///  Would not like #dartformat to spoil this layout. lol
   ///  ?, #  Have special meanings here.
@@ -101,7 +103,7 @@ class LexiconBase {
     'U:': 'Unknown', //  ?  Unknown
     'u:': 'unknown', //  ?  Unknown
     'V:': 'Valuable', //  Valuable
-    'v:': 'ValueLess', //  Valueless
+    'v:': 'valueLess', //  valueless
     'X:': ' X or Yes', //  Not known  MUST KNOW !!!
     'Y:': '',
     'Z:': 'Z?',

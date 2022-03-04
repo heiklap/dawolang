@@ -10,13 +10,15 @@ String wordMotto = 'Word library for handling dawolang words.';
 
 ///  Word base class.
 class WordBase {
-  String name;
+  String name = '';
 
-  String ab;
+  String ab = '';
 
   void behave() {}
 
   void act() {}
+
+  //  Constructor
   WordBase();
 }
 

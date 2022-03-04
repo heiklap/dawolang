@@ -1,7 +1,7 @@
 // Copyright (c) 2017, Heikki K Lappalainen. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
-/// * Dawolang 0.0.2 1.10.2018  by  Heikki K Lappalainen
+/// * Dawolang 0.1.0     1.10.2018  by  Heikki K Lappalainen  updated:  4.3.2022
 /// * Small, literal word-based message and command language, that eventually
 /// * grows big, but stays always grateful to dartlang, it's little brother.
 /// * Helps in standardizing words, that are used in messages, and classifying

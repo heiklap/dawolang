@@ -8,7 +8,8 @@ library listHandler;
 
 ///  Great plans for this.. not exactly.
 class ListHandler {
-  List<String> l = new List();
+  //  NULL Safety    List<String> l = new List();
+  List<String> l = [];
   //  Making empty values to list.
   void build() {
     l.addAll(['', '', '', '', '', '', '', '', '']);

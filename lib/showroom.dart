@@ -1,5 +1,6 @@
 // Copyright (c) 2017, Heikki K Lappalainen. All rights reserved. Use of this source code
-// is governed by a BSD-style license that can be found in the LICENSE file.
+/// is governed by a BSD-style license that can be found in the LICENSE file.
+///    version: 0.1.0   updated:  4.3.2022
 
 /// * Showroom holds word-grouping and presentation methods for #dawolang.
 
@@ -94,19 +95,29 @@ class ShowRoom {
     //  print(unknownBunch);
     lt.linePrintList(unknownBunch, 'unKnownBunch', 7);
 
+    //  TODO   NullSafety
     for (var x in _commandM.keys) {
       int wordCount = 0;
       //  pad value left to 20:
-      String padS = _commandM[x].padRight(20, '_');
+      String padS = '';
+      //  hklTry   .toString()
+      //  padS = _commandM[x].padRight(20, '_');
+      //  NO   padS = _commandM[x].padRight(20, '_').toString();
+
+      //   hklTry;   .toString()  in middle
+      padS = _commandM[x].toString().padRight(20, '_');
+
       String findComS = lt.findAllStringsInList(x, comBunch);
 
       _commandM[x] = padS + findComS;
-      String vS = _commandM[x]; //  like:  F:  K:
+      //  hklTry  .toString()  nullSafe  OK
+      String vS = _commandM[x].toString(); //  like:  F:  K:
       print('$x $vS');
       wordCount++;
       //  Just name it to avoid #unused::
       wordCount;
     }
+
     print('       * * *     COMBINATION-GALLERY done   * * * \n');
   } //  -----  showCombination()
 
@@ -114,7 +125,11 @@ class ShowRoom {
   void showCommands(Map<String, String> _commandM) {
     print('       * * *     COMMAND-GALLERY    * * * ');
     for (var x in _commandM.keys) {
-      String vS = _commandM[x];
+      //  TODO  NullSafe  howTo
+      //  String vS = _commandM[x];
+
+      //  hklTry:  .toString   yep  NullSafe
+      String vS = _commandM[x].toString();
       print(' $x  :: $vS');
     }
     print('       * * *     COMMAND-GALLERY  done  * * * \n');
