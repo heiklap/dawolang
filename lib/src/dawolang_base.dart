@@ -10,7 +10,7 @@ class AwesomeDawolang {
 class DawolangClass {
   String name = 'Dawolang class';
   String info = 'Giving some words';
-  String version = '0.1.0';
+  String version = '0.2.0';
 }
 
 var dl = new DawolangClass();

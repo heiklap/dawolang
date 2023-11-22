@@ -1,7 +1,7 @@
 // Copyright (c) 2017, Heikki K Lappalainen. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
-///*      version: 0.1.0   updated:  2022.4.3
+///*      version: 0.2.0   updated:  2022.4.3
 /// * Analyzer finds special words that exist in #lexicon word list.
 /// * Words are classified with: V: R: aso. markings to special groups.
 /// ' Words beginning with same letter are inside same list-item.

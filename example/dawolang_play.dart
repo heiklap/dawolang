@@ -1,6 +1,6 @@
 // Copyright (c) 2017, Heikki K Lappalainen. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
-///  Dawolang version 0.0.2  1.10.2018
+///  Dawolang version 0.2.0  21.11.2023
 
 import 'package:dawolang/dawolang.dart';
 

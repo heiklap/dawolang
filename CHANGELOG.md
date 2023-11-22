@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.0
+  - Dart SDK 3.1.5 (stable)
+
 ## 0.1.0
   - Migrating to null safety
 

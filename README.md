@@ -1,12 +1,13 @@
-# dawolang  0.1.0
+# dawolang  0.2.0
 
+* Dart SDK  3.15 
 * Migrated to null safety
 * Small, literal word-based message and command language, that eventually grows big, but stays always grateful to dartlang, it's little brother.
 * Helps in standardizing words, that are used in messages, and classifying them to groups.
 * Needed: Rules for forming and handling a sentence.
 * Question: Method to give ready sentence to action-handler.
-* HERE:  Updated to be Dart 2.0.0 compatible.
-*   deleting some accidentally added technical big folders in github.
+* HERE:  Updated to be Dart 3.1.5 compatible.
+*   deleted some accidentally added technical big folders in github.
 * NEXT: Handler for non-tracked words in incoming text.
 
 * Watch dawolang: LICENSE file.
@@ -17,7 +18,7 @@
 ## Usage
 
 A simple usage example:
-Version 0.1.0  prints it's data and analyzes and modifies simple String.
+Version 0.2.0  prints it's data and analyzes and modifies simple String.
 
     import 'package:dawolang/dawolang.dart';
 
